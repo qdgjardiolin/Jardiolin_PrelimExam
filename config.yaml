@@ -1,0 +1,13 @@
+---
+- hosts: ubuntu
+  roles:
+    - python
+    - java
+
+    - role: change-motd
+      vars:
+        motd: "Ansible Manage by Donald"
+    - role: create-user
+      vars:
+        username: "qdgjardiolin"
+        name: "Donald Jardiolin"
